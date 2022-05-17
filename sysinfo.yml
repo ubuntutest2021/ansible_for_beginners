@@ -1,0 +1,17 @@
+---
+ - hosts: all
+   tasks:
+   - name: hostname
+     debug:
+       var=ansible_hostname
+  
+   - name: OS and Kernel info
+     vars:
+      msg: |
+       Distribution: {{ ansible_distribution }}
+       Release: {{ ansible_distribution_release }}
+       Distribution Version: {{ ansible_distribution_version }}
+       Kernel: {{ ansible_kernel }}
+       Architecture: {{ ansible_architecture }}
+     debug:
+      msg: "{{ msg.split('\n') }}" 

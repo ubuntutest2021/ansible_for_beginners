@@ -1,0 +1,6 @@
+---
+id_rsa_file: "home/ansadmin/.ssh/id_rsa"
+passphrase: "changeit"
+ansadmin_password: "ansadmin"
+nodes:
+  - 172.31.4.198

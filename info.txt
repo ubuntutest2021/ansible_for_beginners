@@ -1,0 +1,56 @@
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [172.31.1.98]
+ok: [172.31.3.229]
+ok: [172.31.4.198]
+
+TASK [hostname] ****************************************************************
+ok: [172.31.4.198] => {
+    "ansible_hostname": "rhel-managed-node"
+}
+ok: [172.31.3.229] => {
+    "ansible_hostname": "amazon-managed-node"
+}
+ok: [172.31.1.98] => {
+    "ansible_hostname": "ubuntu-managed-node"
+}
+
+TASK [OS and Kernel info] ******************************************************
+ok: [172.31.4.198] => {
+    "msg": [
+        "Distribution: RedHat", 
+        "Release: Ootpa", 
+        "Distribution Version: 8.4", 
+        "Kernel: 4.18.0-305.el8.x86_64", 
+        "Architecture: x86_64", 
+        ""
+    ]
+}
+ok: [172.31.3.229] => {
+    "msg": [
+        "Distribution: Amazon", 
+        "Release: NA", 
+        "Distribution Version: 2", 
+        "Kernel: 5.10.109-104.500.amzn2.x86_64", 
+        "Architecture: x86_64", 
+        ""
+    ]
+}
+ok: [172.31.1.98] => {
+    "msg": [
+        "Distribution: Ubuntu", 
+        "Release: focal", 
+        "Distribution Version: 20.04", 
+        "Kernel: 5.13.0-1022-aws", 
+        "Architecture: x86_64", 
+        ""
+    ]
+}
+
+PLAY RECAP *********************************************************************
+172.31.1.98                : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+172.31.3.229               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+172.31.4.198               : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

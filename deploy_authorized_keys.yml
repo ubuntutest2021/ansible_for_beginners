@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: put pubkey
+      lineinfile:
+      path: "/home/ansadmin/.ssh/authorized_keys"
+      line: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDNX+PlN8p53GzMS05w016IEc+vdxC5sPT9GSHiVil8+v0XgHWl9sqBzj04/5x1Y7VKSLrViJraByEu9Nn0Y4mwQn/My1RsglT5PNedOOen8evrGX077BhuRf0pqrvNOaRZtFTfVOQLBQzjpEAChiWQykOwZ5JslMw9S6nEud+wtrdRUV5xSuZ6wJQyrM1EycKPk1rSPlR0MdWwcuGNapuM0SktFa48KlVtnNpK4VU7sIfybDhIU+TT9GPRP9pN9DwasLMGMbv31YXFfz+RiFpgn4JP+uMpGUAYNtMr8Hz69PryOFDdTxilZCMR2GN+rsrTQVjGYg+rt0HdJ6JNMkTj ansadmin@ansible-control-node
